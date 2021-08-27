@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/OrderSalesTax"
+        android:layout_width="308dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/OrderSubtotal"
+        app:layout_constraintStart_toStartOf="@+id/OrderSubtotal"
+        app:layout_constraintTop_toBottomOf="@+id/OrderSubtotal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/salestax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sales_tax_your_orders"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="164dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/your_order"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="116dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/image_view_your_order"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shoppingcart" />
+
+    <ListView
+        android:id="@+id/yourOrdersListView"
+        android:layout_width="374dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/placeOrderButton"
+        android:layout_width="265dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:onClick="placeOrder"
+        android:text="@string/place_the_order"
+        app:layout_constraintEnd_toEndOf="@+id/OrderTotal"
+        app:layout_constraintStart_toStartOf="@+id/OrderTotal"
+        app:layout_constraintTop_toBottomOf="@+id/OrderTotal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/OrderSubtotal"
+        android:layout_width="312dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/yourOrdersListView"
+        app:layout_constraintStart_toStartOf="@+id/yourOrdersListView"
+        app:layout_constraintTop_toBottomOf="@+id/yourOrdersListView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/subtotal_your_order"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/OrderTotal"
+        android:layout_width="306dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/OrderSalesTax"
+        app:layout_constraintStart_toStartOf="@+id/OrderSalesTax"
+        app:layout_constraintTop_toBottomOf="@+id/OrderSalesTax">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/total"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="151dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/click_on_item_to_remove"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
